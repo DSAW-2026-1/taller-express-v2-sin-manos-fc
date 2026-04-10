@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import authRoutes from './src/routes/authRoutes.js';
-import requestRoutes from './src/routes/requestRoutes.js';
+import authRoutes from './routes/authRoutes.js';
+import requestRoutes from './routes/requestRoutes.js';
 
 // Load environment variables from .env (only works locally)
 // On Vercel, variables are set through the dashboard
@@ -24,4 +24,4 @@ app.listen(PORT, () => {
 });
 
 // Export for Vercel
-//export default app;
+export default app;
