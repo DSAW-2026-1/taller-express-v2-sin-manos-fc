@@ -1,14 +1,9 @@
-import { Router } from 'express';
-import { authenticate } from '../middleware/authMiddleware.js';
+import express from 'express';
 import { handleRequest } from '../controllers/requestController.js';
+import { verifyToken } from '../middleware/authMiddleware.js';
 
-const router = Router();
+const router = express.Router();
 
-/**
- * POST /request
- * Protected endpoint — requires a valid JWT (Bearer token)
- * authenticate middleware runs first, then handleRequest
- */
-router.post('/', authenticate, handleRequest);
+router.get('/', verifyToken, handleRequest); // GET /request
 
 export default router;

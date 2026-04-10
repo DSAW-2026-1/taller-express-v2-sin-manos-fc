@@ -1,13 +1,8 @@
-import { Router } from 'express';
+import express from 'express';
 import { login } from '../controllers/authController.js';
 
-const router = Router();
+const router = express.Router();
 
-/**
- * POST /login
- * Public endpoint — no authentication required
- * Body: { username, password }
- */
-router.post('/', login);
+router.post('/', login); // POST /login
 
 export default router;
