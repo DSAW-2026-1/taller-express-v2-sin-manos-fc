@@ -9,10 +9,8 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// Routes defined directly — no sub-routers
 app.post('/login', login);
 app.post('/request', authenticate, handleRequest);
-
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
