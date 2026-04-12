@@ -237,4 +237,4 @@ La API está desplegada y disponible en:
 
 ---
 
-Tarea hecha por: **Andres Felipe Ramos Pineda**
+Tarea hecha por: **Andres Felipe Ramos Pineda y Juan Felipe Mahecha**
